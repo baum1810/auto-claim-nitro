@@ -60,11 +60,17 @@ baum = driver.find_element_by_xpath('//*[@id="react-select-3-input"]')
 baum.send_keys("New York")
 baum.send_keys(Keys.RETURN)
 time.sleep(1)
-driver.find_element_by_xpath('//*[@id="app-mount"]/div[2]/div/div[2]/div/div/div/div/div/form/div[1]/div[2]/div/div/div/div/div[1]/div/div[5]/div[2]/div[2]/div/input').send_keys("10010")
+driver.find_element_by_xpath('//*[@id="app-mount"]/div[2]/div/div[2]/div/div/div/div/div/form/div[1]/div[2]/div/div/div/div/div[1]/div/div[6]/div/div[2]/div/input').location_once_scrolled_into_view
+time.sleep(2)
+try:
+    driver.find_element_by_xpath('//*[@id="app-mount"]/div[2]/div/div[2]/div/div/div/div/div/form/div[1]/div[2]/div/div/div/div/div[1]/div/div[5]/div[2]/div[2]/div/input').send_keys("10010")
+except:
+    driver.find_element_by_xpath('//*[@id="app-mount"]/div[2]/div/div[2]/div/div/div/div/div/form/div[1]/div[2]/div/div/div/div/div[1]/div/div[6]/div/div[2]/div/input').send_keys("10010")
 time.sleep(2)
 driver.find_element_by_xpath('//*[@id="app-mount"]/div[2]/div/div[2]/div/div/div/div/div/form/div[2]/div/button').click()
 time.sleep(5)
 driver.find_element_by_xpath('//*[@id="app-mount"]/div[2]/div/div[2]/div/div/div/div/div/form/div[1]/div[2]/div/div/div/div/div[1]/div[4]/div/label/input').click()
 time.sleep(1)
 driver.find_element_by_xpath('//*[@id="app-mount"]/div[2]/div/div[2]/div/div/div/div/div/form/div[2]/button').click()
+
 
