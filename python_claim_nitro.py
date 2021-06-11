@@ -72,5 +72,5 @@ time.sleep(5)
 driver.find_element_by_xpath('//*[@id="app-mount"]/div[2]/div/div[2]/div/div/div/div/div/form/div[1]/div[2]/div/div/div/div/div[1]/div[4]/div/label/input').click()
 time.sleep(1)
 driver.find_element_by_xpath('//*[@id="app-mount"]/div[2]/div/div[2]/div/div/div/div/div/form/div[2]/button').click()
-
+driver.Quit()
 
